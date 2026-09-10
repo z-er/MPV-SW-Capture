@@ -1,0 +1,2033 @@
+{
+  "note": "Measurements only. See research report for expected failures and acceptance limits.",
+  "ffmpeg_version": "ffmpeg version 9.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+  "encoder_availability": {
+    "libx264": {
+      "listed": true,
+      "works": true
+    },
+    "h264_nvenc": {
+      "listed": true,
+      "works": true
+    },
+    "h264_qsv": {
+      "listed": true,
+      "works": false
+    },
+    "h264_amf": {
+      "listed": true,
+      "works": false
+    }
+  },
+  "cases": [
+    {
+      "case": "yuyv422-libx264",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 11.719,
+      "preview_exit": null,
+      "bytes": 4494120,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 5.0,
+        "input_codec": "yuyv422",
+        "encoder": "libx264",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 4494120,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "5.084000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.067000",
+              "nb_read_packets": "301",
+              "color_range": "tv",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "214"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "301",
+        "fps": "50.20",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.831x",
+        "out_time": "00:00:04.983313"
+      }
+    },
+    {
+      "case": "yuyv422-h264_nvenc",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 7.891,
+      "preview_exit": null,
+      "bytes": 1803017,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 5.0,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 1803017,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "5.053000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.036000",
+              "nb_read_packets": "301",
+              "color_range": "tv",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "215"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "301",
+        "fps": "50.23",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.829x",
+        "out_time": "00:00:04.966647"
+      }
+    },
+    {
+      "case": "mjpeg-libx264",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 7.797,
+      "preview_exit": null,
+      "bytes": 1286862,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 5.0,
+        "input_codec": "mjpeg",
+        "encoder": "libx264",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 1286862,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "5.023000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuvj420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.050000",
+              "nb_read_packets": "298",
+              "color_range": "pc",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "215"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "298",
+        "fps": "54.01",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.906x",
+        "out_time": "00:00:05.000000"
+      }
+    },
+    {
+      "case": "mjpeg-h264_nvenc",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 7.89,
+      "preview_exit": null,
+      "bytes": 780631,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 5.0,
+        "input_codec": "mjpeg",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 780631,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "5.023000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuvj420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.050000",
+              "nb_read_packets": "298",
+              "color_range": "pc",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "215"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "298",
+        "fps": "54.10",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.908x",
+        "out_time": "00:00:05.000000"
+      }
+    },
+    {
+      "case": "mjpeg-copy",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 7.781,
+      "preview_exit": null,
+      "bytes": 30555427,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 5.0,
+        "input_codec": "mjpeg",
+        "encoder": "copy",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 30555427,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "5.023000",
+          "streams": [
+            {
+              "codec_name": "mjpeg",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuvj422p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.046000",
+              "nb_read_packets": "298",
+              "color_range": "pc",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "215"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "298",
+        "fps": "54.17",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.914x",
+        "out_time": "00:00:05.028934"
+      }
+    },
+    {
+      "case": "h264-not-advertised",
+      "skipped": "Mode not advertised at requested size/fps",
+      "settings": {},
+      "files": [],
+      "last_progress": {}
+    },
+    {
+      "case": "hevc-not-advertised",
+      "skipped": "Mode not advertised at requested size/fps",
+      "settings": {},
+      "files": [],
+      "last_progress": {}
+    },
+    {
+      "case": "mpv-stream-record-tcp",
+      "experiment": "mpv-stream-record-tcp",
+      "exit": 0,
+      "device_drop_messages": 307,
+      "settings": {},
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 1024581,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "5.023000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.000000",
+              "nb_read_packets": "300",
+              "color_range": "tv",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "215"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "300",
+        "fps": "54.39",
+        "dup_frames": "195",
+        "drop_frames": "0",
+        "speed": "0.906x",
+        "out_time": "00:00:05.000000"
+      }
+    },
+    {
+      "case": "mkv-normal",
+      "experiment": "mkv-normal",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 6.782,
+      "preview_exit": null,
+      "bytes": 11663133,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 7,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": true,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 11663133,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "7.021000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.000000",
+              "nb_read_packets": "420",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "330"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "420",
+        "fps": "64.21",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "1.07x",
+        "out_time": "00:00:07.000000"
+      }
+    },
+    {
+      "case": "mkv-interrupted",
+      "experiment": "mkv-interrupted",
+      "exit": 1,
+      "reason": "forced_interruption",
+      "wall_seconds": 5.109,
+      "preview_exit": null,
+      "bytes": 8388608,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 7,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": true,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 5,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 8388608,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "7.000000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.000000",
+              "nb_read_packets": "291",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "226"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "259",
+        "fps": "63.88",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": " 1.1x",
+        "out_time": "00:00:04.480000"
+      }
+    },
+    {
+      "case": "mp4-normal",
+      "experiment": "mp4-normal",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 6.781,
+      "preview_exit": null,
+      "bytes": 11669118,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 7,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mp4",
+        "bitrate": 12,
+        "synthetic": true,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mp4",
+          "bytes": 11669118,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "7.000000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.000000",
+              "duration": "7.000000",
+              "nb_read_packets": "420"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "duration": "7.000000",
+              "nb_read_packets": "330"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "420",
+        "fps": "64.06",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "1.07x",
+        "out_time": "00:00:07.000000"
+      }
+    },
+    {
+      "case": "mp4-interrupted",
+      "experiment": "mp4-interrupted",
+      "exit": 1,
+      "reason": "forced_interruption",
+      "wall_seconds": 5.11,
+      "preview_exit": null,
+      "bytes": 8912944,
+      "valid_media": false,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 7,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mp4",
+        "bitrate": 12,
+        "synthetic": true,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 5,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mp4",
+          "bytes": 8912944,
+          "probe_exit": 1,
+          "decode_exit": 3199971767,
+          "duration": null,
+          "streams": []
+        }
+      ],
+      "last_progress": {
+        "frame": "259",
+        "fps": "63.90",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "1.11x",
+        "out_time": "00:00:04.501333"
+      }
+    },
+    {
+      "case": "fragmented-normal",
+      "experiment": "fragmented-normal",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 6.781,
+      "preview_exit": null,
+      "bytes": 11664004,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 7,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "fragmented",
+        "bitrate": 12,
+        "synthetic": true,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mp4",
+          "bytes": 11664004,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "7.050000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.050000",
+              "duration": "7.000000",
+              "nb_read_packets": "420"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "duration": "7.050000",
+              "nb_read_packets": "330"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "420",
+        "fps": "64.09",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "1.07x",
+        "out_time": "00:00:07.000000"
+      }
+    },
+    {
+      "case": "fragmented-interrupted",
+      "experiment": "fragmented-interrupted",
+      "exit": 1,
+      "reason": "forced_interruption",
+      "wall_seconds": 5.125,
+      "preview_exit": null,
+      "bytes": 6815772,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 7,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "fragmented",
+        "bitrate": 12,
+        "synthetic": true,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 5,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mp4",
+          "bytes": 6815772,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "4.050000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.050000",
+              "duration": "4.000000",
+              "nb_read_packets": "181"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "duration": "4.018000",
+              "nb_read_packets": "93"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "259",
+        "fps": "63.91",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": " 1.1x",
+        "out_time": "00:00:04.458667"
+      }
+    },
+    {
+      "case": "segments-normal",
+      "experiment": "segments-normal",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 6.797,
+      "preview_exit": null,
+      "bytes": 11665454,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 7,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "segments",
+        "bitrate": 12,
+        "synthetic": true,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record-000.mkv",
+          "bytes": 3910427,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "2.050000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.050000",
+              "nb_read_packets": "120",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.050000",
+              "nb_read_packets": "93"
+            }
+          ]
+        },
+        {
+          "file": "record-001.mkv",
+          "bytes": 3134592,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "2.016000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.016000",
+              "nb_read_packets": "120",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "94"
+            }
+          ]
+        },
+        {
+          "file": "record-002.mkv",
+          "bytes": 3052818,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "2.011000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.011000",
+              "nb_read_packets": "120",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "93"
+            }
+          ]
+        },
+        {
+          "file": "record-003.mkv",
+          "bytes": 1567617,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "1.048000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.027000",
+              "nb_read_packets": "60",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "50"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "420",
+        "fps": "64.13",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "1.07x",
+        "out_time": "00:00:07.000000"
+      }
+    },
+    {
+      "case": "segments-interrupted",
+      "experiment": "segments-interrupted",
+      "exit": 1,
+      "reason": "forced_interruption",
+      "wall_seconds": 5.14,
+      "preview_exit": null,
+      "bytes": 7045019,
+      "valid_media": false,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 7,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "segments",
+        "bitrate": 12,
+        "synthetic": true,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 5,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record-000.mkv",
+          "bytes": 3910427,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "2.050000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.050000",
+              "nb_read_packets": "120",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.050000",
+              "nb_read_packets": "93"
+            }
+          ]
+        },
+        {
+          "file": "record-001.mkv",
+          "bytes": 3134592,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "2.016000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.016000",
+              "nb_read_packets": "120",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "94"
+            }
+          ]
+        },
+        {
+          "file": "record-002.mkv",
+          "bytes": 0,
+          "probe_exit": 1,
+          "decode_exit": 3199971767,
+          "duration": null,
+          "streams": []
+        }
+      ],
+      "last_progress": {
+        "frame": "259",
+        "fps": "63.85",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": " 1.1x",
+        "out_time": "00:00:04.458667"
+      }
+    },
+    {
+      "experiment": "mkv-to-mp4-remux",
+      "exit": 0,
+      "has_error": false,
+      "settings": {},
+      "files": [
+        {
+          "file": "remuxed.mp4",
+          "bytes": 11671406,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "7.001000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "140000/2333",
+              "start_time": "0.000000",
+              "duration": "6.999000",
+              "nb_read_packets": "420"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "duration": "7.001000",
+              "nb_read_packets": "330"
+            }
+          ]
+        }
+      ],
+      "last_progress": {}
+    },
+    {
+      "case": "raw-baseline",
+      "experiment": "raw-baseline-3s",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 5.89,
+      "preview_exit": null,
+      "bytes": 751175679,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 3,
+        "input_codec": "yuyv422",
+        "encoder": "raw-baseline",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 751175679,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "3.062000",
+          "streams": [
+            {
+              "codec_name": "rawvideo",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuyv422",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.045000",
+              "nb_read_packets": "181",
+              "color_range": "tv",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "pcm_s16le",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "6"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "181",
+        "fps": "44.68",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.745x",
+        "out_time": "00:00:03.016655"
+      }
+    },
+    {
+      "case": "raw-preview",
+      "experiment": "single-owner-raw-preview",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 9.437,
+      "preview_exit": 0,
+      "bytes": 1801637,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 5,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": true,
+        "headless": true,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 1801637,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "5.055000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.038000",
+              "nb_read_packets": "298",
+              "color_range": "tv",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "215"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "298",
+        "fps": "45.95",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.924x",
+        "out_time": "00:00:05.994512"
+      }
+    },
+    {
+      "case": "mjpeg-preview",
+      "experiment": "single-owner-mjpeg-preview",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 8.797,
+      "preview_exit": 0,
+      "bytes": 770491,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 5,
+        "input_codec": "mjpeg",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": true,
+        "headless": true,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 770491,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "5.023000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuvj420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.050000",
+              "nb_read_packets": "298",
+              "color_range": "pc",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "215"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "298",
+        "fps": "54.11",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "   1x",
+        "out_time": "00:00:05.531000"
+      }
+    },
+    {
+      "case": "second-device-open",
+      "experiment": "second-device-open",
+      "exit": 4294967291,
+      "reason": "completed",
+      "wall_seconds": 1.719,
+      "preview_exit": null,
+      "bytes": 0,
+      "valid_media": false,
+      "first_preview_alive_after_recording": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 5,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [],
+      "last_progress": {}
+    },
+    {
+      "case": "video-only",
+      "experiment": "video-only",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 6.172,
+      "preview_exit": null,
+      "bytes": 1683570,
+      "valid_media": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 5,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 1683570,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "5.017000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.000000",
+              "nb_read_packets": "301",
+              "color_range": "tv",
+              "color_space": "bt470bg"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "301",
+        "fps": "59.64",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.984x",
+        "out_time": "00:00:04.966647"
+      }
+    },
+    {
+      "case": "mpv-mjpeg-option",
+      "experiment": "mpv-mjpeg-option",
+      "exit": 2,
+      "negotiated_mjpeg": false,
+      "has_error": false,
+      "settings": {},
+      "files": [],
+      "last_progress": {}
+    },
+    {
+      "case": "preview-closed",
+      "experiment": "preview-closed",
+      "exit": 4294967264,
+      "reason": "preview_closed",
+      "wall_seconds": 3.172,
+      "preview_exit": 1,
+      "bytes": 6269815,
+      "valid_media": true,
+      "device_drop_messages": 0,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 10,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "rtbuf_mb": 64,
+        "synthetic": true,
+        "preview": true,
+        "headless": true,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 6269815,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "3.455000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.000000",
+              "nb_read_packets": "207",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "162",
+              "sample_rate": "48000",
+              "channels": 1
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "207",
+        "fps": "69.84",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "1.16x",
+        "out_time": "00:00:03.434667"
+      }
+    },
+    {
+      "case": "early-stop",
+      "experiment": "early-stop",
+      "exit": 0,
+      "reason": "early_stop",
+      "wall_seconds": 3.25,
+      "preview_exit": null,
+      "bytes": 6380786,
+      "valid_media": true,
+      "device_drop_messages": 0,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 10,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "rtbuf_mb": 64,
+        "synthetic": true,
+        "preview": false,
+        "headless": false,
+        "stop_after": 3,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 6380786,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "3.534000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.000000",
+              "nb_read_packets": "212",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "165",
+              "sample_rate": "48000",
+              "channels": 1
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "212",
+        "fps": "69.52",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "1.15x",
+        "out_time": "00:00:03.498667"
+      }
+    },
+    {
+      "case": "size-limit",
+      "experiment": "size-limit",
+      "exit": 0,
+      "reason": "size_limit",
+      "wall_seconds": 1.219,
+      "preview_exit": null,
+      "bytes": 3103468,
+      "valid_media": true,
+      "device_drop_messages": 0,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 10,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "rtbuf_mb": 64,
+        "synthetic": true,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 1
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 3103468,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "1.500000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.000000",
+              "nb_read_packets": "90",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "66",
+              "sample_rate": "48000",
+              "channels": 1
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "90",
+        "fps": "88.97",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "1.43x",
+        "out_time": "00:00:01.450000"
+      }
+    },
+    {
+      "experiment": "low-space-refusal",
+      "has_error": true,
+      "settings": {},
+      "files": [],
+      "last_progress": {}
+    },
+    {
+      "case": "invalid-device",
+      "experiment": "invalid-device",
+      "exit": 4294967291,
+      "reason": "process_error",
+      "wall_seconds": 0.313,
+      "preview_exit": null,
+      "bytes": 0,
+      "valid_media": false,
+      "device_drop_messages": 0,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 5,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "rtbuf_mb": 64,
+        "synthetic": false,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [],
+      "last_progress": {}
+    },
+    {
+      "case": "runtime-low-space",
+      "experiment": "runtime-low-space-simulated",
+      "exit": 0,
+      "reason": "low_disk",
+      "wall_seconds": 3.25,
+      "preview_exit": null,
+      "bytes": 6396609,
+      "valid_media": true,
+      "device_drop_messages": 0,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 10,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "rtbuf_mb": 64,
+        "synthetic": true,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 6396609,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "3.550000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.000000",
+              "nb_read_packets": "213",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "162",
+              "sample_rate": "48000",
+              "channels": 1
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "213",
+        "fps": "69.56",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "1.14x",
+        "out_time": "00:00:03.500000"
+      }
+    },
+    {
+      "case": "stop-file",
+      "experiment": "stop-file-and-process-isolation",
+      "exit": 0,
+      "reason": "stop_file",
+      "wall_seconds": 3.25,
+      "preview_exit": null,
+      "bytes": 6379588,
+      "valid_media": true,
+      "device_drop_messages": 0,
+      "unrelated_ffmpeg_survived": true,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 10,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "rtbuf_mb": 64,
+        "synthetic": true,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 6379588,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "3.534000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.000000",
+              "nb_read_packets": "212",
+              "color_range": "tv"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "162",
+              "sample_rate": "48000",
+              "channels": 1
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "212",
+        "fps": "69.47",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "1.14x",
+        "out_time": "00:00:03.483333"
+      }
+    },
+    {
+      "case": "record",
+      "experiment": "long-run",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 64.093,
+      "preview_exit": 0,
+      "bytes": 92281001,
+      "valid_media": true,
+      "device_drop_messages": 3,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 60.0,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": true,
+        "headless": true,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 92281001,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "60.062000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.045000",
+              "nb_read_packets": "3598",
+              "color_range": "tv",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "2584"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "3598",
+        "fps": "58.52",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.992x",
+        "out_time": "00:01:00.984881"
+      }
+    },
+    {
+      "case": "record",
+      "experiment": "moving-mjpeg",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 34.781,
+      "preview_exit": 0,
+      "bytes": 46886487,
+      "valid_media": true,
+      "device_drop_messages": 0,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 30.0,
+        "input_codec": "mjpeg",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": true,
+        "headless": true,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 46886487,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "30.063000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuvj420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.046000",
+              "nb_read_packets": "1801",
+              "color_range": "pc",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "1292"
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "1801",
+        "fps": "57.84",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.995x",
+        "out_time": "00:00:30.988599"
+      }
+    },
+    {
+      "case": "record",
+      "experiment": "moving-software",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 33.922,
+      "preview_exit": 0,
+      "bytes": 44075372,
+      "valid_media": true,
+      "device_drop_messages": 3,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 30.0,
+        "input_codec": "yuyv422",
+        "encoder": "libx264",
+        "container": "mkv",
+        "bitrate": 12,
+        "synthetic": false,
+        "preview": true,
+        "headless": true,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 44075372,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "30.063000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.046000",
+              "nb_read_packets": "1798",
+              "color_range": "tv",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "1292",
+              "sample_rate": "44100",
+              "channels": 2
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "1798",
+        "fps": "57.09",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.984x",
+        "out_time": "00:00:30.987946"
+      }
+    },
+    {
+      "case": "record",
+      "experiment": "raw-buffer-128",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 34.015,
+      "preview_exit": 0,
+      "bytes": 46716394,
+      "valid_media": true,
+      "device_drop_messages": 0,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 30.0,
+        "input_codec": "yuyv422",
+        "encoder": "h264_nvenc",
+        "container": "mkv",
+        "bitrate": 12,
+        "rtbuf_mb": 128,
+        "synthetic": false,
+        "preview": true,
+        "headless": true,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 46716394,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "30.053000",
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuv420p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.036000",
+              "nb_read_packets": "1801",
+              "color_range": "tv",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "1292",
+              "sample_rate": "44100",
+              "channels": 2
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "1801",
+        "fps": "57.18",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.984x",
+        "out_time": "00:00:30.996339"
+      }
+    },
+    {
+      "case": "record",
+      "experiment": "moving-mjpeg-copy",
+      "exit": 0,
+      "reason": "completed",
+      "wall_seconds": 7.797,
+      "preview_exit": null,
+      "bytes": 68461741,
+      "valid_media": true,
+      "device_drop_messages": 0,
+      "settings": {
+        "size": "1920x1080",
+        "fps": 60,
+        "seconds": 5.0,
+        "input_codec": "mjpeg",
+        "encoder": "copy",
+        "container": "mkv",
+        "bitrate": 12,
+        "rtbuf_mb": 64,
+        "synthetic": false,
+        "preview": false,
+        "headless": false,
+        "stop_after": 0,
+        "kill_after": 0,
+        "reserve_mb": 512,
+        "max_mb": 2048
+      },
+      "files": [
+        {
+          "file": "record.mkv",
+          "bytes": 68461741,
+          "probe_exit": 0,
+          "decode_exit": 0,
+          "duration": "5.065000",
+          "streams": [
+            {
+              "codec_name": "mjpeg",
+              "codec_type": "video",
+              "width": 1920,
+              "height": 1080,
+              "pix_fmt": "yuvj422p",
+              "avg_frame_rate": "60/1",
+              "start_time": "0.048000",
+              "nb_read_packets": "301",
+              "color_range": "pc",
+              "color_space": "bt470bg"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "start_time": "0.000000",
+              "nb_read_packets": "216",
+              "sample_rate": "44100",
+              "channels": 2
+            }
+          ]
+        }
+      ],
+      "last_progress": {
+        "frame": "301",
+        "fps": "53.48",
+        "dup_frames": "0",
+        "drop_frames": "0",
+        "speed": "0.894x",
+        "out_time": "00:00:05.033314"
+      }
+    }
+  ]
+}
